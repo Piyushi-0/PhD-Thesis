@@ -1,0 +1,94 @@
+\documentclass[lof,lot,loa,lol,loth,department=cse,degree=phd,backref=page,spacing=onehalf]{iiththesis}
+
+\title{Improving Optimal Transport using Kernel Methods}
+\submitted{\today}
+\author{Piyushi Manupriya}
+\rollno{CS18M20P100002}
+\adviser{Prof. J. Saketha Nath}
+\addradviser{Department of Computer Science and Engineering, IIT Hyderabad}
+
+\chair{Prof. M. Vidyasagar}
+\addrchair{Department of Artificial Intelligence, IIT Hyderabad}
+\external{[Name]}
+\addrexternal{[Institution]}
+\internal{Prof. Vineeth N. Balasubramanian}
+\addrinternal{Department of Computer Science and Engineering, IIT Hyderabad}
+\externalsecond{Prof. Prathosh A. P.}
+\addrexternalsecond{Department of Electrical Communication Engineering, IISc Bengaluru}
+
+
+\usepackage{import}
+\import{common/}{preamble}
+% \setcounter{secnumdepth}{4}
+% \setcounter{tocdepth}{4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Include specific chapters while preserving the chapter number.
+%% Abstract must always be added.
+\includeonly{
+  Non-Tech/acks,
+  Non-Tech/dedication,
+  intro-chapter/abstract,
+  intro-chapter/notations,
+  intro-chapter/introduction,
+  background/bg,
+  chapter-1/chapter-1,
+  chapter-2/chapter-2,
+  chapter-3/chapter-3,
+  conclusion-chapter/conclusion,
+  Appendices/AppCh1,
+  Appendices/AppCh2,
+  Appendices/AppCh3,
+  Non-Tech/publications,
+  blank
+}
+
+\include{Non-Tech/acks}
+\include{Non-Tech/dedication}
+\include{intro-chapter/abstract}
+
+\renewcommand{\bibname}{References}
+% \renewcommand*{\listtheoremname}{List of Proposed Theoretical Results}
+
+\begin{document}
+% \pagenumbering{roman}
+\phantomsection\addcontentsline{toc}{section}{Abbreviations and Notations}
+\include{intro-chapter/notations}
+\clearpage
+\newpage
+\phantomsection\addcontentsline{toc}{section}{List of Tables}\listoftables
+\clearpage
+\newpage
+\phantomsection\addcontentsline{toc}{section}{List of Figures}\listoffigures
+\clearpage
+\newpage
+\phantomsection\addcontentsline{toc}{section}{List of Algorithms}\listofalgorithms
+% \clearpage
+% \newpage
+% \phantomsection\addcontentsline{toc}{section}{List of Theoretical Results}\listoftheorems[ignoreall,show={theorem,lemma,corollary}]
+\clearpage
+\newpage
+% \pagenumbering{arabic}
+\include{intro-chapter/introduction}
+\include{background/bg}
+\include{chapter-1/chapter-1}
+\include{chapter-2/chapter-2}
+\include{chapter-3/chapter-3}
+\include{conclusion-chapter/conclusion}
+
+\include{Appendices/AppCh1}
+\include{Appendices/AppCh2}
+\include{Appendices/AppCh3}
+\include{blank}
+\include{Non-Tech/publications}
+
+\newpage
+\phantomsection\addcontentsline{toc}{chapter}{References} % 
+\setcitestyle{numbers}
+\bibliographystyle{plainnat}
+% Please do not remove this
+%\bibliographystyle{iiththesis}
+\bibliography{common/references}
+
+%\printindex
+\end{document}

@@ -1,0 +1,107 @@
+\chapter*{Abbreviations and Notations}\label{notn}
+\section*{Abbreviations}
+\vspace{0.25in}
+% \setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}l  p{125mm}@{}}
+OT & Optimal transport.\\
+$\epsilon$-OT & Entropy-regularized OT with $\epsilon$ as the regularization coefficient.\\
+TV & Total variation.\\
+TV-OT & OT formulation with TV regularization over marginals.\\
+KL-OT & OT formulation with KL-divergence regularization over marginals.\\
+$\epsilon$-KLOT & Entropy-regularized KL-OT with $\epsilon$ as the regularization coefficient.\\
+RKHS & Reproducing kernel Hilbert space.\\
+KME & Kernel Mean Embedding.\\
+$\textup{MMD}_k$ & Maximum Mean Discrepancy associated with kernel $k$;\\
+& written as MMD when properties specific to $k$ are not being discussed.\\
+C.O.D. & Curse of dimensionality.\\
+RBF & Radial Basis Function kernel or Gaussian kernel.\\
+IMQ & Inverse Multi-Quadratic kernel.\\
+IPM & Integral probability metric.\\
+APGD & Accelerated projected gradient descent.\\
+RSC & Restricted strong concavity.\\
+RSM & Restricted smoothness.\\
+IID & Independent and identically distributed.\\
+MMD-OT & Proposed OT formulation with MMD regularization over marginals.\\
+COT & Proposed OT formulation between conditional measures.\\
+Sparse-OT & Proposed framework for sparsity-constrained OT.\\
+\end{tabular}
+
+\section*{Notations}
+\vspace{0.25in}
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}l  p{125mm}@{}}
+$\mathcal{X}$, $\calY$, $\mathcal{Z}$ & Subspace for the supports of different measures; often $\R^d$ $(d>0)$.\\
+%\midrule
+$m,\ n$ & Number of samples from the source and target measures, respectively. Often assumed $m=n$ for simplicity of notations.\\
+%\midrule
+$k(\cdot, \ \cdot)$ & Kernel function.\\
+%\midrule
+$K$ & Upper-bound on the no. of non-zero entries in the transport plan.\\
+%\midrule
+$c(\cdot, \ \cdot)$ & Cost function over the support of the measures.\\
+%\midrule
+$\mathcal{H}_k$ & RKHS associated with kernel $k$.\\
+%\midrule
+$\phi_k(\cdot)$ & Feature map associated with kernel $k$. $\phi_k : \mathcal{X}\mapsto \mathcal{H}_k$.\\
+$\mu_k(\cdot)$ & Kernel-mean-embedding in $\mathcal{H}_k$ of the specified measure.\\
+%\midrule
+$\mathcal{L}(\mathcal{X})$ & Set of real-valued measurable functions on $\mathcal{X}$.\\
+%\midrule
+$\mathcal{C}(\mathcal{X})$ & Set of real-valued continuous functions on $\mathcal{X}$.\\
+%\midrule
+$\mathcal{R}(\mathcal{X})$ & Set of signed (finite) measures supported on $\mathcal{X}$.\\
+%\midrule
+$\mathcal{R}^+(\mathcal{X})$ & Set of non-negative measures supported on $\mathcal{X}$.\\
+%\midrule
+$\mathcal{R}_1^+(\mathcal{X})$ & Set of probability measures supported on $\mathcal{X}$.\\
+%\midrule
+$|\cdot|$ & Total mass when the argument is a measure; cardinality when the argument is a set; modulus otherwise.\\
+$s_0,\ t_0$ & True source and target measures, respectively.\\
+%\midrule
+$s_{X,\ Y},\ s_{Y|X}$ & Joint measure and corresponding conditional.\\
+%\midrule
+$t_{X',\ Y'},\ t_{Y'|X'}$ & Joint measure and corresponding conditional.\\
+%\midrule
+% $H(\cdot)$ & Entropy of a positive measure.\\
+$D_f(\cdot, \ \cdot)$ & $f$-divergence, associated with the function $f$, between the specified positive measures.\\
+$I_\calG(\cdot, \ \cdot)$ & IPM, associated with the generating set $\calG$, between the specified measures. \\
+$\mathcal{K}_c(\cdot, \ \cdot)$ & Kantorovich metric between the specified measures, associated with cost metric $c$.\\
+$\bar{W}_{c, p}(\cdot, \ \cdot)$ & $p$-Wasserstein metric between the specified distributions, associated with cost metric $c$.\\
+$\pi$ & Joint density for the transport plan.\\
+%\midrule
+$\pi_1$ & First marginal density of $\pi$.\\
+%\midrule 
+$\pi_2$ & Second marginal density of $\pi$.\\
+%\midrule
+$\pi^C(\cdot,\ \cdot|x)$ & Transport plan, between conditionals, as a function of $x\in \calZ$.\\
+$\calR_m(\cdot)$ & Rademacher complexity of the specified model class, computed using the given $m$ IID samples.
+\end{tabular}
+
+\section*{Notations (Contd.)}
+\vspace{0.25in}
+% \setlength{\tabcolsep}{6pt}
+\begin{tabular}{@{}l  p{125mm}@{}}
+$\hat{s}_m$ & Empirical measure over $m$ samples from $s_0$.\\
+%\midrule
+$\hat{t}_n$ & Empirical measure over $n$ samples from $t_0$.\\
+$\R^d_+$ & Subspace of non-negative $d$-dimensional real-valued vectors.\\
+$\bone$, $\bzero$ & Vector (or matrix) of ones and zeros, respectively. Dimensions omitted when clear from the context.\\
+$\bgamma (\in \mathbb{R}_+^{m\times n}) $ & Transport plan finitely parameterized on the empirical samples from the source and target measures.\\
+%\midrule
+$\bC (\in \mathbb{R}^{m\times n})$ & Matrix with entries as evaluations of cost function ($c$) over the corresponding source and target samples.\\
+%\midrule
+$\mathbf{G}_{11}(\in \mathbb{R}^{m\times m})$ & Gram matrix over samples from the source measure, with a pre-specified kernel function.\\
+$\mathbf{G}_{22}(\in \mathbb{R}^{n\times n})$ & Gram matrix over samples from the target measure,
+ with a pre-specified kernel function.\\
+$\mathbf{G}_{12} (\in \mathbb{R}^{m\times n})$ &  Matrix with each entry as kernel function's evaluation between the corresponding source and target samples.\\
+$\Lambda$ & Set of regularization hyperparameters.\\
+$\calU(\cdot, \ \cdot)$ & Optimal objective of the proposed OT formulation with $\textup{MMD}_k$ regularization.\\
+$\hatcalUF(\cdot, \ \cdot)$ & Optimal objective of the estimator of $\calU(\cdot, \ \cdot)$ with a finitely parameterized transport plan.\\
+$\calWF(\cdot, \ \cdot)$ & Objective for the proposed OT formulation with squared-$\textup{MMD}_k$ regularization and a finitely-parameterized transport plan.\\
+% $\calUsq(\cdot, \ \cdot)$ & Optimal objective for the proposed OT formulation with squared-$\textup{MMD}_k$ regularization and a finitely-parameterized transport plan.\\
+$\mathcal{B}_{k, c, \Lambda}(\cdots)$ & Optimal objective of the proposed barycenter problem.\\
+$\hatcalBF(\cdots)$ & Optimal objective of the proposed barycenter estimator, with finitely-parameterized transport plans.\\
+$\calWI(\cdot, \ \cdot)$ & Optimal objective of the proposed OT formulation regularized with an IPM (other than MMD) with generating set $\mathcal{G}$.\\
+$\calCW(\cdot, \ \cdot)$ & Optimal objective of the proposed OT formulation between conditionals with $\textup{MMD}_k$ regularization.
+\end{tabular}
+\setlength{\tabcolsep}{2pt}

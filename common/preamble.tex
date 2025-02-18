@@ -1,0 +1,491 @@
+\usepackage{xifthen}
+\usepackage{xspace}
+\usepackage[table]{xcolor}
+\usepackage{import} %% support relative input
+\usepackage{amssymb} %% Popular math symbols
+\usepackage{amsfonts} %% Extra math symbols and fonts
+\usepackage{natbib}
+\usepackage{multirow}
+\usepackage{mathtools,amsthm,bbm}
+
+\usepackage{hyperref}
+
+% \hypersetup{
+%     colorlinks = false,
+%     linkcolor = {blue}
+%     }
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{amsmath,array,booktabs,caption,fancyvrb,graphicx,tabularx}
+%% acmart already includes amsmath,array,booktabs,caption,fancyvrb,graphicx,hypdoc,libertine,longtable,newtxmath,tabularx,zi4,
+\usepackage{mathtools} %% Extension to amsmath
+\usepackage{stmaryrd} %% Additional math symbols for CS
+\captionsetup[table]{position=top}
+\captionsetup[figure]{position=bottom}
+\usepackage{multirow} %% Cell spanning multiple rows
+\usepackage{arydshln} %% Draw dash-lines in array/tabular
+%\usepackage[flushleft]{threeparttable} %% table with footnote, not a float
+\usepackage{thm-restate}
+\usepackage{listings} %% Code listings
+% \renewcommand{\lstlistlistingname}{List of Listings}
+\usepackage{textcomp} %% Required by upquote
+% \captionsetup[lstlisting]{position=bottom,singlelinecheck=false,justification=justified}
+\usepackage[scaled=.9]{sourcecodepro} %% change typewritter font to sourcecodepro
+%% \renewcommand\ttdefault{sourcecodepro} %% sourcecodepro sets it by default
+%% \rmdefault %% Roman or Serif
+%% \sfdefault %% Sans Serif
+%% \ttdefault %% Set default Monospaced font (Typewriter)
+%% \familydefault %% Set default font in the body of TeX documents. Default is Roman
+\usepackage{bm}
+\usepackage{enumitem} %% Layout for enumerate, itemize, and description
+\usepackage[normalem]{ulem} %% Custom undeline and strikeout
+%\usepackage{hyperref} %% Support navigation with hypertext links
+% \usepackage{titlesec} % Also for chapter style
+\usepackage[Lenny]{fncychap} % Fancy chapter style
+%% Provides algorithm and algorithmic environments
+%% Here algorithm is a float, algorithmic is environment for writing algo
+%% Use them with IEEETran
+\usepackage{algorithm,algpseudocode}
+
+\newcommand{\tikzxmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0,0) to [bend left=6] (1,1);
+    \draw[line width=0.7,line cap=round] (0.2,0.95) to [bend right=3] (0.8,0.05);
+}}
+\newcommand{\tikzcmark}{%
+\tikz[scale=0.23] {
+    \draw[line width=0.7,line cap=round] (0.25,0) to [bend left=10] (1,1);
+    \draw[line width=0.8,line cap=round] (0,0.35) to [bend right=1] (0.23,0);
+}}
+
+%% algorithm2e provides algorithm environment
+%% Here algorithm is a float as well as environment for writing algo
+%\usepackage[ruled,linesnumbered]{algorithm2e}
+
+\usepackage{subcaption}
+%% Draw and plot using tikz and pgfplots
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{arrows.meta}
+%\usetikzlibrary{graphdrawing} %% LuaLaTeX is needed
+\usetikzlibrary{graphs}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+%\usegdlibrary{trees}
+\pgfplotsset{width=10cm,compat=1.14}
+\pgfplotsset{xticklabel={\tick},scaled x ticks=false}
+\pgfplotsset{plot coordinates/math parser=false}
+
+%% Watermark, comment out for final draft
+\usepackage{draftwatermark}
+
+% \SetWatermarkText{Unpublished Working Draft \\ Do Not Share.}
+\SetWatermarkText{}
+\SetWatermarkScale{.5}
+\SetWatermarkAngle{45}
+\SetWatermarkColor[gray]{0.9}
+%\SetWatermarkColor[rgb]{0.7,0,0}
+\SetWatermarkFontSize{2cm}
+%% Watermark end
+% \usepackage{ntheorem} % for list of theorems
+\usepackage{float}
+%\restylefloat{table}
+%\usepackage{stfloats} %% better positioning of floats in 2-column documents
+\usepackage[hypcap=true]{subcaption} %% captions for subfigures
+\captionsetup[subtable]{position=below}
+\captionsetup[subfigure]{position=below}
+%\usepackage{subfig} %% does not work properly with hyperref, prefer subcaption
+
+%% Uncomment for IEEETran
+%\newtheorem{definition}{Definition}
+%\usepackage{cite}
+
+%% appendix with toc support
+%% Provides appendix command and appendices environment
+
+\usepackage[titletoc,toc,page,header]{appendix}
+\hypersetup{
+    colorlinks=true,
+    % linkcolor=blue,
+    filecolor=darkgray!70,
+    urlcolor=blue,
+    }
+\usepackage{mathabx}
+\usepackage{mdframed}
+
+\definecolor{AliceBlue}{rgb}{0.94, 0.97, 1.0}
+\definecolor{LightSteelBlue}{rgb}{0.69, 0.77, 0.87}
+\definecolor{LemonChiffon}{rgb}{1.0, 0.98, 0.8}
+\definecolor{Gold}{rgb}{1.0, 0.84, 0.0}
+\definecolor{Orange}{rgb}{1.0, 0.65, 0.0}
+\definecolor{PapayaWhip}{rgb}{1.0, 0.94, 0.84}
+\definecolor{Honeydew}{rgb}{0.94, 1.0, 0.94}
+\definecolor{PaleGreen}{rgb}{0.6, 0.98, 0.6}
+
+\newmdenv[
+  % backgroundcolor=Honeydew,
+  % linecolor=PaleGreen!70,
+  backgroundcolor=Lavender!30,
+  linecolor=Purple!20,
+  linewidth=0.5pt,
+  roundcorner=5pt,
+  innertopmargin=-0.5pt,
+]{definitionBox}
+
+\newmdenv[
+  % backgroundcolor=Honeydew,
+  % linecolor=PaleGreen!70,
+  backgroundcolor=Lavender!30,
+  linecolor=Purple!20,
+  linewidth=0.5pt,
+  roundcorner=5pt,
+  innertopmargin=5pt,
+]{definitionBoxIntro}
+
+\newmdenv[
+  backgroundcolor=LemonChiffon!50,
+  linecolor=Gold!60,
+  linewidth=0.5pt,
+  roundcorner=5pt,
+  innertopmargin=-1pt,
+]{theoremBox}
+
+\newmdenv[
+  backgroundcolor=LemonChiffon!25,
+  linecolor=Gold!40,
+  linewidth=0.5pt,
+  roundcorner=5pt,
+  innertopmargin=-1pt,
+]{corollaryBox}
+
+\newmdenv[
+  backgroundcolor=AliceBlue,
+  linecolor=LightSteelBlue,
+  linewidth=0.5pt,
+  roundcorner=5pt,
+  innertopmargin=-1pt,
+]{lemmaBox}
+\def\bone{\mathbf{1}}
+\def\calC{\mathcal{C}}
+\def\calB{\mathcal{B}}
+\def\calH{\mathcal{H}}
+\def\calM{\mathcal{M}}
+\def\calR{\mathcal{R}}
+\def\N{\mathbb{N}}
+\def\calI{\mathcal{I}}
+\def\calO{\mathcal{O}}
+\def\Bary{\mathcal{B}_{k, c, \Lambda}}
+\def\S{\textup{Sec.}}
+\def\calCW{\mathcal{CW}_{k, c, \Lambda}}
+\def\calCWm{\mathcal{CW}_{k, c, \Lambda, m}}
+\def\widehatcalCWm{\widehat{\mathcal{CW}}_{k, c, \Lambda, m}}
+\def\calWF{W^F_{k, c, \Lambda}}
+\def\calU{\mathcal{W}_{k, c, \Lambda}}
+\def\barcalU{\widebar{\mathcal{W}}_{k, c, \Lambda}}
+\def\hatcalU{\widehat{\mathcal{W}}_{k, c, \Lambda}}
+\def\hatcalUF{\widehat{\mathcal{W}}^F_{k, c, \Lambda, m}}
+\def\hatcalBF{\widehat{\mathcal{B}}^F_{k,c,\Lambda, m}}
+\def\calUsq{\widehat{\mathcal{W}^{F}}_{k, c, \Lambda}}
+\def\calWI{\mathcal{W}_{\mathcal{G}, c, \Lambda}}
+% \def\calU{\mathcal{W}^{k, 1}}
+% \def\calUsq{\mathcal{W}^{k, 2}}
+% \def\calWI{\mathcal{W}^{I}}
+\def\calX{\mathcal{X}}
+\def\calF{\mathcal{F}}
+\def\calZ{\mathcal{Z}}
+\def\calL{\mathcal{L}}
+\def\calK{\mathcal{K}}
+\def\calG{\mathcal{G}}
+\def\calW{\mathcal{W}}
+\def\calD{\mathcal{D}}
+\def\calP{\mathcal{P}}
+\def\KL{\textup{KL}}
+\def\MMD{\textup{MMD}}
+\def\hatpi{\hat{\pi}}
+\def\hatxi{\hat{\xi}}
+\def\bark{\bar{k}}
+\def\calY{\mathcal{Y}}
+\def\Supp{\textup{supp}}
+\def\Tr{\textup{Tr}}
+\def\vec{\textup{vec}}
+\def\bgamma{\bm{\gamma}}
+\def\bmu{\mathbf{s}_m}
+\def\bnu{\mathbf{t}_n}
+\def\balpha{\bm{\alpha}}
+\def\bbeta{\bm{\beta}}
+\def\bG{\mathbf{G}}
+\def\bC{\mathbf{C}}
+\def\bg{\mathbf{g}}
+\def\bp{\mathbf{p}}
+\def\bq{\mathbf{q}}
+\def\br{\mathbf{r}}
+\def\bw{\mathbf{w}}
+\def\bx{\mathbf{x}}
+\def\by{\mathbf{y}}
+\def\bz{\mathbf{z}}
+\def\R{\mathbb{R}}
+\def\E{\mathbb{E}}
+\def\u{\{a\}}
+\def\bzero{\mathbf{0}}
+\def\TV{\textup{TV}}
+\def\hats{\bm{\hat{s}}}
+\def\hatt{\bm{\hat{t}}}
+
+\newtheorem{manualtheoreminner}{Theorem}
+\newenvironment{manualtheorem}[1]{%
+  \renewcommand\themanualtheoreminner{#1}%
+  \manualtheoreminner
+}{\endmanualtheoreminner}
+
+\newtheorem{manuallemmainner}{Lemma}
+\newenvironment{manuallemma}[1]{%
+  \renewcommand\themanuallemmainner{#1}%
+  \manuallemmainner
+}{\endmanuallemmainner}
+
+\newtheorem{manualcorrinner}{Corollary}
+\newenvironment{manualcorr}[1]{%
+  \renewcommand\themanualcorrinner{#1}%
+  \manualcorrinner
+}{\endmanualcorrinner}
+
+\newcolumntype{g}{>{\columncolor{green!10}}c}
+%% Use this package to extract declaration page and approval sheet
+%%\usepackage[2]{pagesel} %% Extract selected pages
+
+\widowpenalty10000
+\clubpenalty10000
+
+%% Custom commands for referencing
+\import{}{refs.tex}
+
+%% Review comment commands
+\newcommand{\PM}[1]{\textcolor{blue}{NOTE:#1}}
+\newcommand{\fixme}[2][]{\textcolor{red}{\textbf{ToDo:}\ifthenelse{\isempty{#1}{}}{}{#1--}#2}}
+\newcommand\redsout{\bgroup\markoverwith{\textcolor{orange}{\rule[0.5ex]{2pt}{1pt}}}\ULon} %needs ulem
+\newcommand{\suggest}[2]{\redsout{#2}\textcolor{orange}{\textit{#1}}}
+%% Review comment commands end
+
+%% Custom commands
+\newcommand{\ie}{{\em i.e.,}\xspace}
+\newcommand{\etal}{{\em et al.}\xspace}
+\newcommand{\tool}[1]{{\sc {#1}}\xspace}
+\newcommand{\Omit}[1]{}
+\newcommand{\EM}[1]{{\em #1}}
+\newcommand{\BF}[1]{{\bf #1}}
+\newcommand{\TT}[1]{{\tt #1}}
+\newcommand{\IT}[1]{{\it #1}}
+\newcommand{\inangleb}[1]{\ensuremath{\langle#1\rangle}}
+\newcommand{\insquareb}[1]{\ensuremath{[#1]}}
+\newcommand{\toolname}{{\sc LLOV}\xspace}
+\newcommand{\tsan}{\tool{ThreadSanitizer}\xspace}
+\newcommand{\drd}{\tool{Valgrind DRD}\xspace}
+\newcommand{\helgrind}{\tool{Helgrind}\xspace}
+\newcommand{\llovmhp}{{\sc LLOV (with MHP \& Polly)}\xspace}
+\newcommand{\llovpolly}{{\sc LLOV (with Polly)}\xspace}
+\newcommand{\llovmhponly}{{\sc LLOV (with MHP)}\xspace}
+\newcommand{\tg}{\tool{TaskGraph}\xspace}
+
+\newcommand{\nocontentsline}[3]{}
+\let\origcontentsline\addcontentsline
+\newcommand\stoptoc{\let\addcontentsline\nocontentsline}
+\newcommand\resumetoc{\let\addcontentsline\origcontentsline}
+
+\def\argmax{\mathop{\rm arg\,max}\limits}
+\def\argmin{\mathop{\rm arg\,min}\limits}
+
+% \newcounter{theoremCounter}
+
+\theoremstyle{plain}
+% \newtheorem{theorem}{Theorem}[chapter]
+% \newtheorem{proposition}{Proposition}[chapter]
+% \newtheorem{lemma}{Lemma}[chapter]
+% \newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+% \theoremstyle{definition}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{assumption}[theorem]{Assumption}
+% \theoremstyle{remark}
+% \newtheorem{remark}[theorem]{Remark}
+
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+
+% \numberwithin{algorithm}{section}
+% \numberwithin{theorem}{chapter}
+% \numberwithin{proposition}{chapter}
+% \numberwithin{lemma}{chapter}
+% \numberwithin{corollary}{chapter}
+
+%%  Zapf Chancer character
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Listing styles
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\setcounter{secnumdepth}{3}
+
+\lstdefinestyle{CStyle}{
+%  backgroundcolor=\color{backgroundColour},
+  commentstyle=\color{mGreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{mGray},
+  stringstyle=\color{mPurple},
+%  identifierstyle=\color{blue},
+  morekeywords={
+    pragma, omp, parallel, workshare,
+    sections, section, single, barrier,
+    master, critical, atomic, simd,
+    device, shared, private, copyprivate,
+    firstprivate, lastprivate, public,
+    threadprivate, reduction, ordered,
+    dynamic, runtime, guided, monotonic,
+    nonmonotonic, target, distribute,
+    num_threads, default, copyin, copyprivate,
+    nowait, collapse, schedule, linear,
+    aligned, safelen, simdlen, declare,
+    task, taskloop, taskgroup, taskwait,
+    final, untied, mergeable, depend,
+    grainsize, num_tasks, priority, nogroup,
+    taskyield, data, map, update, to, from,
+    enter, exit, defaultmap, teams, num_teams,
+    flush, source, sink,
+  },
+  basicstyle=\ttfamily\footnotesize,
+  escapechar=|,
+  breakatwhitespace=false,
+  breaklines=true,
+  frame=none,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  language=C++,
+}
+
+\lstdefinestyle{FortStyle}{
+%backgroundcolor=\color{backgroundColour},
+  commentstyle=\color{mGreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{mGray},
+  stringstyle=\color{mPurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  frame=none,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2,
+  language=[90]Fortran,
+  escapechar=|,
+}
+
+\lstdefinestyle{ompStyle}{
+  language=c++,
+  commentstyle=\color{mGreen},
+  basicstyle=\ttfamily\footnotesize,
+  numbers=none,
+  numberstyle=\tiny\color{mGray},
+  numbersep=5pt,
+  backgroundcolor=\color{white},
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  frame=single,
+  captionpos=b,
+  tabsize=4,
+  breaklines=true,
+  columns=fullflexible,
+  breakautoindent=false,
+  resetmargins=true,
+  morekeywords={
+    pragma, omp, parallel, workshare,
+    sections, section, single,
+    master, critical, atomic, simd,
+    device, shared, private, copyprivate,
+    firstprivate, lastprivate, public,
+    threadprivate, reduction, ordered,
+    dynamic, runtime, guided, monotonic,
+    nonmonotonic, target, distribute,
+    num_threads, default, copyin, copyprivate,
+    nowait, collapse, schedule, linear,
+    aligned, safelen, simdlen, declare,
+    task, taskloop, taskgroup, taskwait,
+    final, untied, mergeable, depend,
+    grainsize, num_tasks, priority, nogroup,
+    taskyield, data, map, update, to, from,
+    enter, exit, defaultmap, teams, num_teams,
+    flush, source, sink,
+  },
+  escapeinside={(*}{*)},
+}
+
+\makeatletter
+\lstdefinelanguage{llvm}{
+  morecomment = [l]{;},
+  morestring=[b]",
+  sensitive = true,
+  classoffset=0,
+  morekeywords={
+    define, declare, global, constant,
+    internal, external, private,
+    linkonce, linkonce_odr, weak, weak_odr, appending,
+    common, extern_weak,
+    thread_local, dllimport, dllexport,
+    hidden, protected, default,
+    except, deplibs,
+    volatile, fastcc, coldcc, cc, ccc,
+    x86_stdcallcc, x86_fastcallcc,
+    ptx_kernel, ptx_device,
+    signext, zeroext, inreg, sret, nounwind, noreturn,
+    nocapture, byval, nest, readnone, readonly, noalias, uwtable,
+    inlinehint, noinline, alwaysinline, optsize, ssp, sspreq,
+    noredzone, noimplicitfloat, naked, alignstack,
+    module, asm, align, tail, to,
+    addrspace, section, alias, sideeffect, c, gc,
+    target, datalayout, triple,
+    blockaddress
+  },
+  classoffset=1,
+  keywordstyle=\color{purple},
+  morekeywords={
+    fadd, sub, fsub, mul, fmul,
+    sdiv, udiv, fdiv, srem, urem, frem,
+    and, or, xor,
+    icmp, fcmp,
+    eq, ne, ugt, uge, ult, ule, sgt, sge, slt, sle,
+    oeq, ogt, oge, olt, ole, one, ord, ueq, ugt, uge,
+    ult, ule, une, uno,
+    nuw, nsw, exact, inbounds,
+    phi, call, select, shl, lshr, ashr, va_arg,
+    trunc, zext, sext,
+    fptrunc, fpext, fptoui, fptosi, uitofp, sitofp,
+    ptrtoint, inttoptr, bitcast,
+    ret, br, indirectbr, switch, invoke, unwind, unreachable,
+    malloc, alloca, free, load, store, getelementptr,
+    extractelement, insertelement, shufflevector,
+    extractvalue, insertvalue,
+  },
+  alsoletter={\%},
+  keywordsprefix={\%},
+}
+\makeatother
+%% End Listing styles
