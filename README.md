@@ -5,3 +5,5 @@ LaTeX source code of my PhD Thesis, **"Improving Optimal Transport using Kernel 
 *The code is compatible with pdfLaTex compiler and 2022 Tex Live version.*
 
 Code for the backbone IIT-Hyderabad thesis template is adapted from [https://github.com/utpalbora/IITHThesis](https://github.com/utpalbora/IITHThesis).
+
+**[BibTeX](https://hal.science/tel-05010415v1/bibtex) for citations.**
